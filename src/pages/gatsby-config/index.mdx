@@ -1,0 +1,240 @@
+<h1 align="center" style={{marginTop: "2em"}}>GatsbyJS Configuration</h1>
+
+<br/><br/>
+
+Gatsby is a free and open source framework based on React that helps developers build blazing fast **websites** and **apps**.
+
+<br/>
+
+## Quick Start
+
+Install the Gatsby CLI (Command Line Interface):
+
+```bash
+npm install -g gatsby-cli
+```
+
+<br/>
+
+Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React. Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+
+```bash
+gatsby new davidjaimes.github.io.source.code https://github.com/gatsbyjs/gatsby-starter-hello-world
+```
+
+<br/>
+
+## GitHub Pages
+
+Publish files to a gh-pages branch on GitHub (or any other branch anywhere else).
+
+```bash
+npm install gh-pages --save-dev
+```
+
+<br/>
+
+Create a new directoy and file under the root called `scripts/deploy-github.js`. Then, add the following to the file you just created:
+
+```js
+const ghpages = require('gh-pages')
+
+ghpages.publish(
+  'public',
+  {
+    branch: 'master',
+    repo: 'https://github.com/davidjaimes/davidjaimes.github.io.git',
+  },
+  () => {
+    console.log('Deploy Complete!')
+  }
+)
+```
+
+<br/>
+
+Then add a `deploy` script to `package.json` in your repository’s codebase:
+
+```js
+{
+  "scripts": {
+    "deploy": "npm run build && node ./scripts/deploy-github"
+  }
+}
+```
+
+<br/>
+
+When you run `npm run deploy` all contents of the public folder will be moved to your repository’s `master` branch. Make sure that your repository’s settings has the `master` branch set as the source to deploy from.
+
+<br/>
+
+## React Dependencies
+
+Include popular icons in your React projects easily with `react-icons`, which utilizes ES6 imports that allows you to include only the icons that your project is using.
+
+```bash
+npm install react-icons --save
+```
+
+<br/>
+
+The best way to consume React-Bootstrap is via the npm package which you can install with `npm` (or `yarn` if you prefer).
+
+```bash
+npm install react-bootstrap bootstrap
+```
+
+<br/>
+
+In order for Bootstrap to render properly you need the following line in `gatsby-browser.js`:
+
+```js
+import 'bootstrap/dist/css/bootstrap.css';
+```
+
+<br/>
+
+## Markdown
+
+MDX is markdown for the component era. It lets you write JSX embedded inside markdown. It’s a great combination because it allows you to use markdown’s often terse syntax (such as `# heading`) for the little things and JSX for more advanced components.
+
+```bash
+npm install gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
+```
+
+<br/>
+
+## PrismJS
+
+Prism is a lightweight, extensible syntax highlighter, built with modern web standards in mind. It’s used in thousands of websites, including some of those you visit daily. Add syntax highlighting to code blocks in markdown files using PrismJS.
+
+```bash
+npm install --save gatsby-remark-prismjs prismjs
+```
+
+<br/>
+
+In order for Prism to render properly with a custom theme you need the following line in `gatsby-browser.js` and also save the theme in `node_modules/prismjs/themes`:
+
+```js
+require("prismjs/themes/base16-google.light.css")
+```
+
+<br/>
+
+## KaTeX
+
+The fastest math typesetting library for the web.
+- **Fast:** KaTeX renders its math synchronously and doesn’t need to reflow the page.
+- **Print quality:** KaTeX’s layout is based on Donald Knuth’s TeX, the gold standard for math typesetting.
+- **Self contained:** KaTeX has no dependencies and can easily be bundled with your website resources.
+- **Server side rendering:** KaTeX produces the same output regardless of browser or environment, so you can pre-render expressions using Node.js and send them as plain HTML.
+
+```bash
+npm install remark-math rehype-katex katex
+```
+
+<br/>
+
+I tried installation `gatsby-remark-katex` and `gatsby-remark-mathjax` but it didn't work. Check out the [reasons](https://github.com/gatsbyjs/gatsby/issues/21866) why. KaTeX will render properly with the following line in `gatsby-browser.js`
+
+```js
+require(`katex/dist/katex.min.css`)
+```
+
+<br/>
+
+## Other Plugins
+
+The web app manifest (part of the PWA specification) enabled by this plugin allows users to add your site to their home screen on most mobile browsers. The manifest provides configuration and icons to the phone.
+
+```bash
+npm install --save gatsby-plugin-manifest
+```
+
+<br/>
+
+A Gatsby source plugin for sourcing data into your Gatsby application from your local filesystem.
+
+```bash
+npm install --save gatsby-source-filesystem
+```
+
+<br/>
+
+Processes images in markdown so they can be used in the production build.
+
+```bash
+npm install --save gatsby-remark-images gatsby-plugin-sharp
+```
+
+<br/>
+
+## Gatsby Config File
+
+Setup your `gatsby-config.js` file:
+
+```js
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ */
+
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 75,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {icon: 'src/images/favicon.png'},
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        remarkPlugins: [require(`remark-math`)],
+        rehypePlugins: [require(`rehype-katex`)],
+        defaultLayouts: {
+          default: require.resolve(`./src/components/layout.jsx`),
+        },
+        extensions: [`.mdx`, `.md`],
+        plugins: [`gatsby-remark-images`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {maxWidth: 800},
+          },
+        ],
+      },
+    },
+  ],
+}
+```
