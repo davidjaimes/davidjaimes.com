@@ -1,6 +1,7 @@
 module.exports = {
 	siteMetadata: {siteUrl: `https://davidjaimes.com`},
 	plugins: [
+		`gatsby-plugin-react-helmet`,
 		{
 	    	resolve: `gatsby-plugin-sharp`,
 	    	options: {
@@ -23,6 +24,7 @@ module.exports = {
 				path: `${__dirname}/src/images/`,
 			},
 		},
+		{resolve: `gatsby-plugin-offline`},
 		{
 			resolve: `gatsby-plugin-mdx`,
 			options: {
