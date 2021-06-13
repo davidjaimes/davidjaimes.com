@@ -1,0 +1,19 @@
+{
+  "name": "davidjaimes.com",
+  "version": "1.0.0",
+  "description": "Source code for https://davidjaimes.com",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidjaimes/davidjaimes.com.git"
+  },
+  "author": "David Jaimes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidjaimes/davidjaimes.com/issues"
+  },
+  "homepage": "https://github.com/davidjaimes/davidjaimes.com#readme"
+}
