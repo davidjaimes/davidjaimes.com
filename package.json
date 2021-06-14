@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidjaimes/davidjaimes.com.git"
+    "url": "git+https://github.com/davidjaimes/davidjaimes.github.io.git"
   },
   "author": "David Jaimes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/davidjaimes/davidjaimes.com/issues"
+    "url": "https://github.com/davidjaimes/davidjaimes.github.io/issues"
   },
-  "homepage": "https://github.com/davidjaimes/davidjaimes.com#readme",
+  "homepage": "https://github.com/davidjaimes/davidjaimes.github.io#readme",
   "devDependencies": {
     "gh-pages": "^1.1.0"
   },
