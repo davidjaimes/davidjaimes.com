@@ -8,11 +8,11 @@ import {FaGithub} from 'react-icons/fa'
 
 export default function Navigation() {
 	return (
-		<Navbar collapseOnSelect expand="lg" className="shadow-sm">
+		<Navbar collapseOnSelect expand="lg" className="shadow-sm" bg="dark" variant="dark">
 			<Navbar.Brand href="/">
-         		<Button variant="dark">davidjaimes.com</Button>{' '}
+         		<Button variant="light">davidjaimes.com</Button>{' '}
 			</Navbar.Brand>
-			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+			<Navbar.Toggle aria-controls="responsive-navbar-nav" bg="light"/>
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Nav className="mr-auto">
 					<Nav.Link href="/about">About</Nav.Link>
