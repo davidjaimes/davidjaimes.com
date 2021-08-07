@@ -17,8 +17,10 @@ export default function CardIndex() {
 	return (
 		<div>
 
-			<Card className="mt-5 mb-5 border border-dark text-muted">
-				<Card.Body>
+			<hr/>
+
+			<Card className="mt-5 mb-5 border-0 text-muted">
+				<Card.Body className="m-0 p-0">
 					<Media>
 						<Media.Body className="mb-3">
 							<Card.Title><a href="/nearby-stars" className="text-dark stretched-link"><FaBook size={25}/> Nearby Stars to 25.1 Light Years</a></Card.Title>
@@ -33,8 +35,10 @@ export default function CardIndex() {
 				</Card.Body>
 			</Card>
 
-			<Card className="mt-5 mb-5 border border-dark text-muted">
-				<Card.Body>
+			<hr/>
+
+			<Card className="mt-5 mb-5 border-0 text-muted">
+				<Card.Body className="m-0 p-0">
 					<Media>
 						<Media.Body className="mb-3">
 							<Card.Title><a href="/kepler-16b" className="text-dark stretched-link"><FaBook size={25}/> Kepler-16b: The First Circumbinary Planet</a></Card.Title>
@@ -49,8 +53,10 @@ export default function CardIndex() {
 				</Card.Body>
 			</Card>
 
-			<Card className="mt-5 mb-5 border border-dark text-muted">
-				<Card.Body>
+			<hr/>
+
+			<Card className="mt-5 mb-5 border-0 text-muted">
+				<Card.Body className="m-0 p-0">
 					<Media>
 						<Media.Body className="mb-3">
 							<Card.Title><a href="/eclipsing-binaries" className="text-dark stretched-link"><FaBook size={25}/> KOI-2570: An Eclipsing Binary Star System</a></Card.Title>
@@ -65,8 +71,10 @@ export default function CardIndex() {
 				</Card.Body>
 			</Card>
 
-			<Card className="mt-5 mb-5 border border-dark text-muted">
-				<Card.Body>
+			<hr/>
+
+			<Card className="mt-5 mb-5 border-0 text-muted">
+				<Card.Body className="m-0 p-0">
 					<Media>
 						<Media.Body className="mb-3">
 							<Card.Title><a href="/jskycalc" className="text-dark stretched-link"><FaBook size={25}/> JSkyCalc: An Observing Aid</a></Card.Title>
@@ -81,8 +89,10 @@ export default function CardIndex() {
 				</Card.Body>
 			</Card>
 
-			<Card className="mt-5 mb-5 border border-dark text-muted">
-				<Card.Body>
+			<hr/>
+
+			<Card className="mt-5 mb-5 border-0 text-muted">
+				<Card.Body className="m-0 p-0">
 					<Media>
 						<Media.Body className="mb-3">
 							<Card.Title><a href="/linear-regression" className="text-dark stretched-link"><FaBook size={25}/> Fitting a Line to Data with Linear Algebra</a></Card.Title>
@@ -96,6 +106,9 @@ export default function CardIndex() {
 					</Card.Text>
 				</Card.Body>
 			</Card>
+
+			<hr/>
+
 		</div>
 	)
 }
