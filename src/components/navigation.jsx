@@ -16,9 +16,10 @@ export default function Navigation() {
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Nav className="mr-auto">
 					<Nav.Link href="/about">About</Nav.Link>
-					<Nav.Link href="/gatsby-config">Documentation</Nav.Link>
+					<Nav.Link href="/gatsby">Gatsby</Nav.Link>
+					<Nav.Link href="/macOS">macOS</Nav.Link>
 					<Nav.Link href="/legal">Terms of Use</Nav.Link>
-					<NavDropdown title="Tutorials" id="collasible-nav-dropdown">
+					<NavDropdown title="Tutorials" id="collasible-nav-dropdown" menuVariant="dark">
 						<NavDropdown.Item href="/linear-regression">Linear Regression</NavDropdown.Item>
 						<NavDropdown.Item href="/eclipsing-binaries">Eclipsing Binaries</NavDropdown.Item>
 						<NavDropdown.Item href="/jskycalc">JSkyCalc</NavDropdown.Item>
