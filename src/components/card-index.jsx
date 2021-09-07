@@ -19,17 +19,18 @@ export default function CardIndex() {
 
 			<hr/>
 
-			<Card className="mt-5 mb-5 border-0 text-muted">
+			<Card className="mt-5 mb-5 border-0 text-dark">
 				<Card.Body className="m-0 p-0">
 					<Media>
 						<Media.Body className="mb-3">
 							<Card.Title><a href="/nearby-stars" className="text-dark stretched-link"><FaBook size={25}/> Nearby Stars to 25.1 Light Years</a></Card.Title>
-							<Badge pill variant="dark">Python</Badge>{' '}
-							<Badge pill variant="dark">AstroPy</Badge>{' '}
+							<Badge pill variant="primary">Python</Badge>{' '}
+							<Badge pill variant="primary">AstroPy</Badge>{' '}
+							<Card.Subtitle className="mt-3 text-secondary" style={{fontSize: '11px'}}>September 06, 2021</Card.Subtitle>
 						</Media.Body>
 						<Image src={NearbyStars} rounded className="mb-3 border border-secondary" width={120} height={90} alt='Kepler-16'/>
 					</Media>
-					<Card.Text>
+					<Card.Text style={{fontSize: '14px'}}>
 						<b>Luminosity</b> and <b>surface temperature (color)</b> are two properties of stars we can measure. Using these two characteristics has proved extraordinarily effective un understanding the properties of stars-the <b>Hertzsprung Russell (HR) diagram</b>. This list includes known stars, brown dwarfs, and planets within 25.1 light years of the Sun. Sources are listed at the end of the page. Some values are estimated.
 					</Card.Text>
 				</Card.Body>
@@ -42,8 +43,8 @@ export default function CardIndex() {
 					<Media>
 						<Media.Body className="mb-3">
 							<Card.Title><a href="/kepler-16b" className="text-dark stretched-link"><FaBook size={25}/> Kepler-16b: The First Circumbinary Planet</a></Card.Title>
-							<Badge pill variant="dark">Python</Badge>{' '}
-							<Badge pill variant="dark">AstroPy</Badge>{' '}
+							<Badge pill variant="primary">Python</Badge>{' '}
+							<Badge pill variant="primary">AstroPy</Badge>{' '}
 						</Media.Body>
 						<Image src={Kepler16} rounded className="mb-3 border border-secondary" width={120} height={90} alt='Kepler-16'/>
 					</Media>
@@ -60,8 +61,8 @@ export default function CardIndex() {
 					<Media>
 						<Media.Body className="mb-3">
 							<Card.Title><a href="/eclipsing-binaries" className="text-dark stretched-link"><FaBook size={25}/> KOI-2570: An Eclipsing Binary Star System</a></Card.Title>
-							<Badge pill variant="dark">Python</Badge>{' '}
-							<Badge pill variant="dark">AstroPy</Badge>{' '}
+							<Badge pill variant="primary">Python</Badge>{' '}
+							<Badge pill variant="primary">AstroPy</Badge>{' '}
 						</Media.Body>
 						<Image src={KOI3570} rounded className="mb-3 border border-secondary" width={120} height={80} alt='KOI-3570'/>
 					</Media>
@@ -78,8 +79,8 @@ export default function CardIndex() {
 					<Media>
 						<Media.Body className="mb-3">
 							<Card.Title><a href="/jskycalc" className="text-dark stretched-link"><FaBook size={25}/> JSkyCalc: An Observing Aid</a></Card.Title>
-							<Badge pill variant="dark">Astronomy</Badge>{' '}
-							<Badge pill variant="dark">Java</Badge>{' '}
+							<Badge pill variant="primary">Astronomy</Badge>{' '}
+							<Badge pill variant="primary">Java</Badge>{' '}
 						</Media.Body>
 						<Image src={JSkyCalc} rounded className="mb-3 border border-secondary" width={120} height={81} alt='JSkyCalc'/>
 					</Media>
@@ -96,8 +97,8 @@ export default function CardIndex() {
 					<Media>
 						<Media.Body className="mb-3">
 							<Card.Title><a href="/linear-regression" className="text-dark stretched-link"><FaBook size={25}/> Fitting a Line to Data with Linear Algebra</a></Card.Title>
-							<Badge pill variant="dark">Python</Badge>{' '}
-							<Badge pill variant="dark">Matplotlib</Badge>{' '}
+							<Badge pill variant="primary">Python</Badge>{' '}
+							<Badge pill variant="primary">Matplotlib</Badge>{' '}
 						</Media.Body>
 						<Image src={Exercise1} rounded className="mb-3 border border-secondary" width={120} height={80} alt='Linear Regression'/>
 					</Media>

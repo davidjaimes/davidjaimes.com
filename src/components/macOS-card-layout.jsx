@@ -23,7 +23,7 @@ export default function CardIndex() {
 				<Card.Body className="m-0 p-0">
 					<Media>
 						<Media.Body className="mb-3">
-							<Card.Title><a href="/macOS/system-preferences" className="text-dark stretched-link"><FaBook size={25}/> macOS: System Preferences</a></Card.Title>
+							<Card.Title><a href="/macOS/system-preferences" className="text-dark stretched-link"><FaBook size={25}/> System Preferences</a></Card.Title>
 							<Badge pill variant="primary">Apple</Badge>{' '}
 							<Badge pill variant="primary">macOS</Badge>{' '}
 						</Media.Body>
@@ -41,7 +41,7 @@ export default function CardIndex() {
 				<Card.Body className="m-0 p-0">
 					<Media>
 						<Media.Body className="mb-3">
-							<Card.Title><a href="/macOS/xcode" className="text-dark stretched-link"><FaBook size={25}/> macOS: Xcode</a></Card.Title>
+							<Card.Title><a href="/macOS/xcode" className="text-dark stretched-link"><FaBook size={25}/> Xcode</a></Card.Title>
 							<Badge pill variant="primary">Apple</Badge>{' '}
 							<Badge pill variant="primary">macOS</Badge>{' '}
 						</Media.Body>
@@ -59,7 +59,7 @@ export default function CardIndex() {
 				<Card.Body className="m-0 p-0">
 					<Media>
 						<Media.Body className="mb-3">
-							<Card.Title><a href="/macOS/homebrew" className="text-dark stretched-link"><FaBook size={25}/> macOS: Homebrew</a></Card.Title>
+							<Card.Title><a href="/macOS/homebrew" className="text-dark stretched-link"><FaBook size={25}/> Homebrew</a></Card.Title>
 							<Badge pill variant="primary">macOS</Badge>{' '}
 							<Badge pill variant="primary">Homebrew</Badge>{' '}
 						</Media.Body>
@@ -77,7 +77,7 @@ export default function CardIndex() {
 				<Card.Body className="m-0 p-0">
 					<Media>
 						<Media.Body className="mb-3">
-							<Card.Title><a href="/macOS/sublime-text" className="text-dark stretched-link"><FaBook size={25}/> macOS: Sublime Text</a></Card.Title>
+							<Card.Title><a href="/macOS/sublime-text" className="text-dark stretched-link"><FaBook size={25}/> Sublime Text</a></Card.Title>
 							<Badge pill variant="primary">macOS</Badge>{' '}
 							<Badge pill variant="primary">Sublime Text</Badge>{' '}
 						</Media.Body>
@@ -95,7 +95,7 @@ export default function CardIndex() {
 				<Card.Body className="m-0 p-0">
 					<Media>
 						<Media.Body className="mb-3">
-							<Card.Title><a href="/linear-regression" className="text-dark stretched-link"><FaBook size={25}/> macOS: HyperJS</a></Card.Title>
+							<Card.Title><a href="/linear-regression" className="text-dark stretched-link"><FaBook size={25}/> HyperJS</a></Card.Title>
 							<Badge pill variant="primary">macOS</Badge>{' '}
 							<Badge pill variant="primary">HyperJS</Badge>{' '}
 						</Media.Body>
