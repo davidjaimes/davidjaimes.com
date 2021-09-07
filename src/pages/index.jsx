@@ -7,13 +7,13 @@ import {Container, Row, Col} from 'react-bootstrap'
 
 // Import Templates
 import Navigation from "../components/navigation"
-import CardIndex from "../components/card-index"
+import CardIndex from "../components/homepage-cards"
 import Footer from "../components/footer"
 
 
 export default function Index() {
 	return (
-		<>
+		<React.Fragment>
 
 			<Helmet>
 				<html lang='en-us'/>
@@ -38,6 +38,6 @@ export default function Index() {
 
 			<Footer></Footer>
 			
-		</>
+		</React.Fragment>
 	)
 }
