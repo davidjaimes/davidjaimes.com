@@ -73,7 +73,7 @@ export default function App() {
 							{mac.badges.map((tag) => {
 								return (
 									<React.Fragment>
-										<Badge pill variant="primary">{tag}</Badge>{' '}
+										<Badge pill variant="dark">{tag}</Badge>{' '}
 									</React.Fragment>
 								)
 							})}

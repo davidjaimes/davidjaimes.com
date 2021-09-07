@@ -10,7 +10,7 @@ export default function Navigation() {
 	return (
 		<Navbar collapseOnSelect expand="lg" className="shadow-sm" bg="light" variant="light">
 			<Navbar.Brand href="/">
-         		<Button variant="primary">davidjaimes.com</Button>{' '}
+         		<Button variant="dark">davidjaimes.com</Button>{' '}
 			</Navbar.Brand>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" bg="light"/>
 			<Navbar.Collapse id="responsive-navbar-nav">
