@@ -10,7 +10,7 @@ Gatsby is a free and open source framework based on React that helps developers 
 
 Install the Gatsby CLI (Command Line Interface):
 
-```bash
+```shell
 npm install -g gatsby-cli
 ```
 
@@ -36,7 +36,7 @@ npm install gh-pages --save-dev
 
 Create a new directoy and file under the root called `scripts/deploy-github.js`. Then, add the following to the file you just created:
 
-```js
+```js{numberLines: true}
 const ghpages = require('gh-pages')
 
 ghpages.publish(
@@ -55,7 +55,7 @@ ghpages.publish(
 
 Then add a `deploy` script to `package.json` in your repository’s codebase:
 
-```js
+```js{numberLines: true}
 {
   "scripts": {
     "deploy": "npm run build && node ./scripts/deploy-github"
@@ -175,7 +175,7 @@ npm install --save gatsby-remark-images gatsby-plugin-sharp
 
 Setup your `gatsby-config.js` file:
 
-```js
+```js{numberLines: true}
 /**
  * Configure your Gatsby site with this file.
  *
