@@ -23,11 +23,49 @@ $$
 f(x) = mx + b \ ,
 $$
 
-where $m$ is the slope and $b$ is the intercept, that *best fits* the points. What is meant by the term “best fit” is, of course, very important; we are making a choice here to which we will return.
+where $m$ is the slope and $b$ is the intercept, that **best fits** the points. What is meant by the term “best fit” is, of course, very important; we are making a choice here to which we will return.
 
 <br/>
 
-## Important Equations
+## Find coefficients to linear equation.
+
+1. Given set of $n$ points $(x_i, y_i)$ on a scatter plot.
+2. Find the best-fit line, $\hat{y}_i= \alpha + \beta x_i$.
+3. Such that the sum of squared errors, $\Sigma (y_i - \hat{y}_i)^2$, is minimized.
+
+<br/>
+
+## Numerical Example
+
+$$
+S_x = \Sigma x_i, \ \ S_y = \Sigma y_i, \ \ S_{xy} = \Sigma x_i y_i \\ S_{xx} = \Sigma x_i^2, \ \ S_{yy} = \Sigma y_i^2
+$$
+
+```python
+import pandas as pd
+df = pd.read_csv('table1.dat', sep=' ', usecols=['x', 'y'])
+Sx = df.x.sum()
+Sy = df.y.sum()
+Sxy = df.x @ df.y
+Sxx = df.x @ df.x
+Syy = df.y @ df.y
+```
+
+<br/>
+
+$$
+\beta = \frac{n S_{xx} - S_x S_y}{n S_{xx} - S_x^2}, \ \ \alpha = \frac{1}{n} S_y - \beta \frac{1}{n} S_x
+$$
+
+```python
+n = len(df)
+beta = (n * Sxy - Sx * Sy) / (n * Sxx - Sx ** 2)
+alpha = (1/n) * (Sy - beta * Sx)
+```
+
+<br/>
+
+## Linear Least Squares
 
 <br/>
 
