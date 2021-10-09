@@ -8,7 +8,7 @@ import {FaGithub} from 'react-icons/fa'
 
 export default function Navigation() {
 	return (
-		<Navbar collapseOnSelect expand="lg" className="shadow-sm" bg="light" variant="light">
+		<Navbar collapseOnSelect expand="lg" className="shadow-sm" bg="light" variant="light" sticky="top">
 			<Navbar.Brand href="/">
          		<Button variant="dark">davidjaimes.com</Button>{' '}
 			</Navbar.Brand>
@@ -21,7 +21,7 @@ export default function Navigation() {
 					<Nav.Link href="/legal" className="text-dark">Terms of Use</Nav.Link>
 				</Nav>
 				<Nav>
-					<Nav.Link href="https://github.com/davidjaimes" className="text-dark"><FaGithub size={25}/> Source Code</Nav.Link>
+					<Nav.Link href="https://github.com/davidjaimes" className="text-dark">Source Code <FaGithub size={25}/></Nav.Link>
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>
