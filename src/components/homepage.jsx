@@ -1,6 +1,6 @@
 // React Dependencies
-import React from "react";
-import {Helmet} from "react-helmet";
+import React from "react"
+import {Helmet} from "react-helmet"
 
 // Bootstrap Dependencies
 import {Container, Row, Col} from 'react-bootstrap'
@@ -10,7 +10,7 @@ import Navigation from "../components/navigation"
 import Footer from "../components/footer"
 
 
-export default function HomePage({children, pageContext}) {
+function HomePage({children, pageContext}) {
 	const { title, subtitle} = pageContext.frontmatter
 	return (
 		<>
@@ -37,3 +37,5 @@ export default function HomePage({children, pageContext}) {
 		</>
 	)
 }
+
+export default HomePage
