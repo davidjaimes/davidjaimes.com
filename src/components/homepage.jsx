@@ -1,23 +1,20 @@
 // React Dependencies
 import React from "react"
-import {Helmet} from "react-helmet"
 
 // Bootstrap Dependencies
 import {Container, Row, Col} from 'react-bootstrap'
 
 // Import Templates
+import headSEO from "../components/seo"
 import Navigation from "../components/navigation"
 import Footer from "../components/footer"
 
 
-function HomePage({children, pageContext}) {
-	const { title, subtitle} = pageContext.frontmatter
+export default function HomePage({children, pageContext}) {
+	const { title, subtitle, description } = pageContext.frontmatter
 	return (
 		<>
-			<Helmet>
-				<title>David Jaimes: {title}</title>
-				<html lang="en"/>
-			</Helmet>
+			<headSEO></headSEO>
 
 			<Navigation></Navigation>
 
@@ -26,6 +23,7 @@ function HomePage({children, pageContext}) {
 					<Col style={{maxWidth: "768px"}}>
 						<h1 align="center" style={{marginTop: "2em"}}>{title}</h1>
 						<p align="center">{subtitle}</p>
+						<p align="center">{description}</p>
 						<br/>
 						<br/>
 						{children}
@@ -37,5 +35,3 @@ function HomePage({children, pageContext}) {
 		</>
 	)
 }
-
-export default HomePage
