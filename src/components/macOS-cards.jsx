@@ -1,7 +1,6 @@
 // React Dependencies
 import { graphql } from 'gatsby'
 import React from 'react'
-import { graphql } from 'gatsby'
 
 // Bootstrap Dependencies
 import {Card, Media, Badge, Image} from 'react-bootstrap'
@@ -15,21 +14,21 @@ import SublimeText from "../images/macOS/04-sublime-text.png"
 import HyperJS from "../images/macOS/05-hyper-terminal.png"
 
 
-export default function App(props) {
+export default function App(data) {
 
-	const post = props.data.Mdx
+	const post = data.allMdx
 
 	return (
 
 		<div>
-			<h1>{post.frontmatter.title}</h1>
+			<h1>{post}</h1>
 		</div>
 	)
 
 }
 
 export const pageQuery = graphql`
-query MyQuery {
+query {
 	allMdx(
 	  filter: {fields: {collection: {eq: "pages"}}}
 	  sort: {fields: [frontmatter___date], order: DESC}
