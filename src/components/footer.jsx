@@ -22,7 +22,7 @@ export default function Footer() {
 							<FaFacebook size={30} color={'grey'}/> &nbsp;&nbsp;&nbsp;&nbsp;
 							<FaYoutube size={30} color={'grey'}/>
 						</p>
-						<p className="text-dark text-center" style={{fontSize: "13px"}}>Copyright &copy; 2021 David Jaimes. All rights reserved.</p>
+						<p className="text-dark text-center" style={{fontSize: "13px"}}>Copyright &copy; 2022 David Jaimes. All rights reserved.</p>
 						<p className="text-dark text-center mb-5" style={{fontSize: "15px"}}>Yo <span style={{color: "#f07199"}}>&hearts;</span> Naxiely</p>
 
 						{/* <Comments/> */}

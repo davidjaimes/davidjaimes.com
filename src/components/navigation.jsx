@@ -17,7 +17,6 @@ export default function Navigation() {
 				<Nav className="mr-auto">
 					<Nav.Link href="/about" className="text-dark">About</Nav.Link>
 					<Nav.Link href="/gatsby" className="text-dark">Gatsby</Nav.Link>
-					<Nav.Link href="/macOS" className="text-dark">macOS</Nav.Link>
 					<Nav.Link href="/legal" className="text-dark">Terms of Use</Nav.Link>
 				</Nav>
 				<Nav>
