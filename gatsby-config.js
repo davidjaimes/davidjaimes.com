@@ -30,7 +30,7 @@ module.exports = {
 			options: {
 				remarkPlugins: [require(`remark-math`)],
     		rehypePlugins: [require(`rehype-katex`)],
-				defaultLayouts: {default: require.resolve(`./src/components/homepage.jsx`)},
+				defaultLayouts: {default: require.resolve(`./src/components/mdx-template.jsx`)},
 				extensions: [`.mdx`, `.md`],
 				plugins: [`gatsby-remark-images`],
 				gatsbyRemarkPlugins: [
