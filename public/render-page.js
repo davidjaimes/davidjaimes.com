@@ -995,7 +995,7 @@ var plugins = [{
     "remarkPlugins": [null],
     "rehypePlugins": [null],
     "defaultLayouts": {
-      "default": "/Users/djaimes/davidjaimes.github.io/src/components/homepage.jsx"
+      "default": "/Users/djaimes/davidjaimes.github.io/src/components/mdx-template.jsx"
     },
     "extensions": [".mdx", ".md"],
     "gatsbyRemarkPlugins": [{
