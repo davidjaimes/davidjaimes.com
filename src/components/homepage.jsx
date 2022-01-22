@@ -11,7 +11,7 @@ import Footer from "../components/footer"
 
 
 export default function HomePage({children, pageContext}) {
-	const { title, subtitle, description } = pageContext.frontmatter
+	const { title, description } = pageContext.frontmatter
 	return (
 		<>
 			<headSEO></headSEO>
@@ -22,7 +22,6 @@ export default function HomePage({children, pageContext}) {
 				<Row className="justify-content-center m-0">
 					<Col style={{maxWidth: "768px"}}>
 						<h1 align="center" style={{marginTop: "2em"}}>{title}</h1>
-						<p align="center">{subtitle}</p>
 						<p align="center">{description}</p>
 						<br/>
 						<br/>
