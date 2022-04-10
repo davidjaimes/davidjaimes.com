@@ -41,7 +41,7 @@ module.exports = {
 		      		inlineCodeMarker: null,
 		      		showLineNumbers: false,
 		      		prompt: {
-	              global: true,
+	               	global: false,
 	            },
 		      	},      
 				  },
