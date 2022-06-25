@@ -12,10 +12,14 @@ import Navigation from "../components/navigation"
 import Footer from "../components/footer"
 
 
-export default function IndexPage ({data}) {
-	const Posts = data.allMdx.edges
-    	.filter(edge => !!edge.node.frontmatter.date)
-    	.map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+const IndexPage = ({
+	data: {
+		allMdx: { edges}
+	},
+
+}) => {
+
+	const posts = edges
 	
 	return (
 		<div>
@@ -37,7 +41,7 @@ export default function IndexPage ({data}) {
 							<h1 className="mt-5 text-muted text-center">Utilization of <b className="text-dark">Data Analysis</b> and <b className="text-dark">Visualization</b> Tools</h1>
 							<p className="mt-5 mb-5 text-muted text-center">Discover the many different ways to collect, analyze, and distribute data gathered from different sources. This is a one-stop shop to build and deploy your own project with easy to follow instructions.</p>
 
-							{Posts}
+							{posts.map(post => <PostLink key={post.node.id} post={post.node} />)}
 							<hr/>
 						</Col>
 					</Row>
@@ -50,7 +54,7 @@ export default function IndexPage ({data}) {
 		
 	)}
 
-
+export default IndexPage
 export const pageQuery = graphql`
   query {
     allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
