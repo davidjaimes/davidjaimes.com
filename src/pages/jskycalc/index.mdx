@@ -1,6 +1,6 @@
 ---
 date: 2022-06-26
-title: "JSkyCalc: A convinient, portable observing aid"
+title: "JSkyCalc for Apple Computers with M1 Chip"
 path: /jskycalc
 badges:
     - macOS
@@ -8,26 +8,15 @@ badges:
 image: jskycalc-user-interface.png
 alt: "JSkyCalc for Apple Computers with M1 Chip"
 ---
+import {Alert} from 'react-bootstrap'
 
 **JSkycalc** expedites the "time-and-the-sky" calculations needed by observational astronomers. The most up to date
 
-import {Alert} from 'react-bootstrap'
-<Alert variant='info'>John Thorstensen's Darthmount website (https://www.dartmouth.edu/~physics/labs/skycalc/flyer.html) is no longer is use.</Alert>
-
-<br/><br/>
-
-## References
-<hr/>
 <br/>
 
-1. [Oracle-Java][1]: The JDK is a development environment for building applications and components using the Java programming language.
+<Alert variant='info'>John Thorstensen's Darthmount website is no longer is use. <br/>dartmouth.edu/~physics/labs/skycalc</Alert>
 
-2. [JSkyCalc][2]: JSkycalc expedites the "time-and-the-sky" calculations needed by observational astronomers.
-
-[1]: https://www.oracle.com/technetwork/java/javase/downloads/index.html
-[2]: https://github.com/jrthorstensen/JSkyCalc
-
-<br/><br/>
+<br/>
 
 ![](jskycalc-sky-display.png)
 
@@ -63,7 +52,14 @@ cd ~/jskycalc
 
 ### 3. Install Oracle-Java JDK Download
 
-Run the java command on the jar file and it should start right up. If you don't have java installed in your system you will get a messege. Click on "more info" and it will take you to the [Oracle-Java][1] website.  Click on "Oracle JDK Download" button from **Java SE 14** section and then download the `jdk-14.0.1_osx-x64_bin.dmg` file.
+Run the java command on the jar file and it should start right up. If you don't have java installed in your system you will get a messege:
+
+```bash
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java.
+```
+
+Do not go to Java.com. Instead use this link [Oracle-Java][1].  Click on "Arm 64 DMG Installer" option from **Java SE 18** section and then download the `jdk-18_macos-aarch64_bin.dmg` file. Double-click on the DMG file you downloaded and follow install instructions.
 
 ```bash
 java -jar JSkyCalc.jar
@@ -145,9 +141,12 @@ some_star 00 37 52.92 -09 42 16.5 2000.0 +++
 <br/>
 
 ## References
-1. [Oracle-Java][1]: Thank you for downloading this release of the Java Platform, Standard Edition Development Kit (JDK). The JDK is a development environment for building applications and components using the Java programming language. The JDK includes tools useful for developing, testing, and monitoring programs written in the Java programming language and running on the Java platform.
+<hr/>
+<br/>
 
-2. [JSkyCalc][2]: JSkycalc expedites the "time-and-the-sky" calculations needed by observational astronomers. To follow the original directions on setting up JSkyCalc on your computer, go to John Thorstensen's website. His directions might be a little outdated (from year 2008) but they still work.
+1. [Oracle-Java][1]: The JDK is a development environment for building applications and components using the Java programming language.
 
-[1]: https://www.oracle.com/technetwork/java/javase/downloads/index.html
-[2]: https://www.dartmouth.edu/~physics/labs/skycalc/flyer.html
+2. [JSkyCalc][2]: JSkycalc expedites the "time-and-the-sky" calculations needed by observational astronomers.
+
+[1]: https://www.oracle.com/java/technologies/downloads/#jdk18-mac
+[2]: https://github.com/jrthorstensen/JSkyCalc
