@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import PostLink from "../components/homepage-cards"
 
 // Bootstrap Dependencies
-import {Container, Row, Col, Form, FormControl} from 'react-bootstrap'
+import {Alert, Container, Row, Col, Form, FormControl} from 'react-bootstrap'
 
 // Import Templates
 import Navigation from "../components/navigation"
@@ -56,20 +56,27 @@ const IndexPage = ({
 				<Container fluid>
 					<Row className="mt-5 justify-content-center ml-0 mr-0">
 						<Col style={{maxWidth: "768px"}}>
-							<h1 className="mt-5 text-muted text-center">Utilization of <b className="text-dark">Data Analysis</b> and <b className="text-dark">Visualization</b> Tools</h1>
-							<p className="mt-5 mb-5 text-muted text-center">Discover the many different ways to collect, analyze, and distribute data gathered from different sources. This is a one-stop shop to build and deploy your own project with easy to follow instructions.</p>
 
-							<Form className="d-flex mb-5">
+							<h1 className="mt-3">Hello there!</h1>
+
+							<p className="mt-3 mb-5 text-muted">Discover the many different ways to collect, analyze, and distribute data gathered from different sources. This is a one-stop shop to build and deploy your own project with easy to follow instructions.</p>
+
+							<Form className="d-flex mb-4">
 								<FormControl
+									size="lg"
 									type="search"
-									placeholder="Search Posts"
+									placeholder="Begin typing to search..."
 									className="me-2"
 									aria-label="Search"
 									value={state.query}
 									onChange={handleInputChange}
 								/>
 							</Form>
+
+							<Alert variant="info" className="mb-4">{posts.length} results</Alert>
+
 							{posts.map(post => <PostLink key={post.node.id} post={post.node} />)}
+
 							<hr/>
 						</Col>
 					</Row>
