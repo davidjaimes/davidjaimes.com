@@ -21,10 +21,9 @@ const IndexPage = ({
 		filteredPosts: [],
 		query: "",
 	  })
-	const allPosts = edges
 	const handleInputChange = event => {
 		const query = event.target.value
-		const filteredPosts = allPosts.filter(post => {
+		const filteredPosts = edges.filter(post => {
 			const {title, badges} = post.node.frontmatter
 			const {excerpt} = post.node
 			return (
@@ -38,7 +37,7 @@ const IndexPage = ({
 			filteredPosts,
 		})
 	}
-	const posts = state.query ? state.filteredPosts : allPosts;
+	const posts = state.query ? state.filteredPosts : edges
 	return (
 		<div>
 			<React.Fragment>
