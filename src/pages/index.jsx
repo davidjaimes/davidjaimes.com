@@ -59,7 +59,7 @@ const IndexPage = ({
 
 							<h1 className="mt-3">Hello there!</h1>
 
-							<p className="mt-3 mb-5 text-muted">Discover the many different ways to collect, analyze, and distribute data gathered from different sources. This is a one-stop shop to build and deploy your own project with easy to follow instructions.</p>
+							<p className="mt-0 mb-3 text-muted">Discover the many different ways to collect, analyze, and distribute data gathered from different sources. This is a one-stop shop to build and deploy your own project with easy to follow instructions.</p>
 
 							<Form className="d-flex mb-4">
 								<FormControl
