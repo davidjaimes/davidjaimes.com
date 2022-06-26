@@ -10,7 +10,7 @@ alt: "JSkyCalc for Apple Computers with M1 Chip"
 ---
 import {Alert} from 'react-bootstrap'
 
-**JSkycalc** expedites the "time-and-the-sky" calculations needed by observational astronomers. The most up to date
+**JSkycalc** expedites the "time-and-the-sky" calculations needed by observational astronomers. The most up to date instructions to install on Apple M1 chip, install Oracle-Java JDK, and add new site locations.
 
 <br/>
 
@@ -22,17 +22,13 @@ import {Alert} from 'react-bootstrap'
 
 <br/><br/>
 
-## Installing JSkyCalc on macOS
-<hr/>
-<br/>
-
-### 1. Download .jar File
+### Download .jar File
 
 Go to [John Thorstensen's][2] GitHub page and download the `JSkyCalc.jar` executable jar file.
 
 <br/>
 
-### 2. Create a New Directory in Home Folder
+### Create a New Directory in Home Folder
 
 I suggest creating a new folder in your home directory and placing the jar file in there. If your jar file is in your Downloads folder after downloading from John's site, you can copy paste the three commands to your terminal and you should end up in your `jskycalc` directory, under your home folder.
 
@@ -50,7 +46,7 @@ cd ~/jskycalc
 
 <br/>
 
-### 3. Install Oracle-Java JDK Download
+### Install Oracle-Java JDK Download
 
 Run the java command on the jar file and it should start right up. If you don't have java installed in your system you will get a messege:
 
@@ -71,7 +67,7 @@ java -jar JSkyCalc.jar
 
 <br/><br/>
 
-### 4. Unpack Files from Jar File
+### Unpack Files from Jar File
 
 To add Mount Laguna Observatory to JSkyCalc, start by unpacking the jar file.
 
@@ -81,7 +77,19 @@ jar -xvf JSkyCalc.jar
 
 <br/>
 
-### 5. Add a New Site Location as Default
+### Add a New Site Location as Default
+
+The following is the general format for adding new site locations:
+
+1. Name, in quotation marks; keep it succinct; must be unique.
+2. Longitude, expressed in DECIMAL HOURS, POSITIVE WESTWARD.
+3. Latitude, in decimal degrees, positive northward.
+4. Offset of standard time from UT, in decimal hours with decimal included positive -> west of Greenwich, negative -> east.
+5. Integer code for the convention used for daylight savings time; 0 -> off, 1 -> USA (keyed to year, includes 1987 revisions), 2 -> a Spanish convention (I think), -1 -> Chilean (negative sign for southern hemisphere logic), -2 -> Australian.
+6. Name of the time zone in quotation marks.
+7. A 1- or 2-character code for the timezone (e.g. "C" for central).
+8. The elevation of the observatory above sea level, in meters.
+9. An estimate of the elevation of the obs. around the terrain that forms its horizon, used for adjusting rise-set times.  THIS CANNOT BE NEGATIVE (negative values cause a square-root domain error and are ignored).
 
 Open `skycalcsites.dat` and add Mount Laguna Observatory as the first site (above Kitt Peak)--it will become the default.
 
@@ -95,9 +103,9 @@ Open `skycalcsites.dat` and add Mount Laguna Observatory as the first site (abov
 
 <br/>
 
-### 6. Save Changes to Jar File
+### Save Changes to Jar File
 
-Reconstruct the jar file and all the changes will take effect.
+Reconstruct the jar file and all the changes will take effect (DO NOT forget the period at the end of command).
 
 ```bash
 jar -cvmf myManifest.mf JSkyCalc.jar .
@@ -105,9 +113,9 @@ jar -cvmf myManifest.mf JSkyCalc.jar .
 
 <br/>
 
-### 7. Environment setup
+### Environment setup
 
-Add following lines to your `~/.bash_profile` file and you will be able to start JSkyCalc from any directory.
+Add following lines to your `~/.zshrc` file and you will be able to start JSkyCalc from any directory.
 
 ```bash
 # use jsky command in any directory to start JSkyCalc
@@ -118,11 +126,11 @@ export CLASSPATH
 
 <br/>
 
-Finally, use the command `source ~/.bash_profile` to source the file and then use jsky command to start using JSkyCalc from any directory! 
+Finally, use the command `source ~/.zshrc` to source the file and then use jsky command to start using JSkyCalc from any directory! 
 
 <br/>
 
-### 8. Sky Objetcs to Target
+### Sky Objetcs to Target
 
 The following line is the general format for JSkyCalc (.dat) files:
 
