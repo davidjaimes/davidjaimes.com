@@ -1,11 +1,11 @@
 // React Dependencies
-import React from "react"
+import React, {useState} from "react"
 import {Helmet} from "react-helmet"
 import { graphql } from "gatsby"
 import PostLink from "../components/homepage-cards"
 
 // Bootstrap Dependencies
-import {Container, Row, Col} from 'react-bootstrap'
+import {Container, Row, Col, Form, FormControl} from 'react-bootstrap'
 
 // Import Templates
 import Navigation from "../components/navigation"
@@ -14,13 +14,31 @@ import Footer from "../components/footer"
 
 const IndexPage = ({
 	data: {
-		allMdx: { edges}
+		allMdx: {edges}
 	},
-
 }) => {
-
-	const posts = edges
-	
+	const [state, setState] = useState({
+		filteredPosts: [],
+		query: "",
+	  })
+	const allPosts = edges
+	const handleInputChange = event => {
+		const query = event.target.value
+		const filteredPosts = allPosts.filter(post => {
+			const {title, badges} = post.node.frontmatter
+			const {excerpt} = post.node
+			return (
+				excerpt.toLowerCase().includes(query.toLowerCase()) ||
+				title.toLowerCase().includes(query.toLowerCase()) ||
+				(badges && badges.join("").toLowerCase().includes(query.toLowerCase()))
+			)
+		})
+		setState({
+			query,
+			filteredPosts,
+		})
+	}
+	const posts = state.query ? state.filteredPosts : allPosts;
 	return (
 		<div>
 			<React.Fragment>
@@ -41,6 +59,16 @@ const IndexPage = ({
 							<h1 className="mt-5 text-muted text-center">Utilization of <b className="text-dark">Data Analysis</b> and <b className="text-dark">Visualization</b> Tools</h1>
 							<p className="mt-5 mb-5 text-muted text-center">Discover the many different ways to collect, analyze, and distribute data gathered from different sources. This is a one-stop shop to build and deploy your own project with easy to follow instructions.</p>
 
+							<Form className="d-flex mb-5">
+								<FormControl
+									type="search"
+									placeholder="Search Posts"
+									className="me-2"
+									aria-label="Search"
+									value={state.query}
+									onChange={handleInputChange}
+								/>
+							</Form>
 							{posts.map(post => <PostLink key={post.node.id} post={post.node} />)}
 							<hr/>
 						</Col>
@@ -53,7 +81,6 @@ const IndexPage = ({
 		</div>
 		
 	)}
-
 export default IndexPage
 export const pageQuery = graphql`
   query {
