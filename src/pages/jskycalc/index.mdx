@@ -5,7 +5,7 @@ path: /jskycalc
 badges:
     - macOS
     - Java
-image: jskycalc-user-interface.png
+image: airmass-display.png
 alt: "JSkyCalc for Apple Computers with M1 Chip"
 ---
 import {Alert} from 'react-bootstrap'
@@ -105,7 +105,7 @@ Open `skycalcsites.dat` and add Mount Laguna Observatory as the first site (abov
 
 ### Save Changes to Jar File
 
-Reconstruct the jar file and all the changes will take effect (DO NOT forget the period at the end of command).
+Reconstruct the jar file and all the changes will take effect (**DO NOT** forget the period at the end of command).
 
 ```bash
 jar -cvmf myManifest.mf JSkyCalc.jar .
@@ -130,7 +130,7 @@ Finally, use the command `source ~/.zshrc` to source the file and then use jsky 
 
 <br/>
 
-### Sky Objetcs to Target
+### Sky Objects to Target
 
 The following line is the general format for JSkyCalc (.dat) files:
 
@@ -142,9 +142,13 @@ Name_no_blanks hh mm ss dd mm ss equinox +++
 
 It's fine if all your stars have equinox=2000. Here is an example of `observe-star.dat` formatted for JSkyCalc.
 
-```bash
-some_star 00 37 52.92 -09 42 16.5 2000.0 +++
 ```
+Vega 18 36 56.34 38 47 01.2802 2000.0 +++
+Altair 19 50 46.99855 08 52 05.9563 2000.0 +++
+Deneb 20 41 25.9 45 16 49 2000.0 +++
+```
+
+![](airmass-display.png)
 
 <br/>
 

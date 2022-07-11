@@ -3,7 +3,6 @@ import React from 'react'
 
 // Bootstrap Dependencies
 import {Card, Media, Badge, Image} from 'react-bootstrap'
-import {FaBook} from 'react-icons/fa'
 
 
 export default function PostLink ({ post }) {
@@ -15,7 +14,7 @@ export default function PostLink ({ post }) {
 			<Card.Body className="m-0 p-0">
 			<Media>
 				<Media.Body className="mb-3">
-					<Card.Title><a href={post.frontmatter.path} className={"text-dark stretched-link"}><FaBook size={25}/> {post.frontmatter.title}</a></Card.Title>
+					<Card.Title><a href={post.frontmatter.path} className={"text-dark stretched-link"}>{post.frontmatter.title}</a></Card.Title>
 	
 					{post.frontmatter.badges.map((tag) => {
 						return (

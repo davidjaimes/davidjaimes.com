@@ -5,11 +5,13 @@ import { graphql } from "gatsby"
 import PostLink from "../components/homepage-cards"
 
 // Bootstrap Dependencies
-import {Alert, Container, Row, Col, Form, FormControl} from 'react-bootstrap'
+import {Alert, Container, Row, Col, Form, FormControl, Figure} from 'react-bootstrap'
 
 // Import Templates
 import Navigation from "../components/navigation"
 import Footer from "../components/footer"
+import GatsbyLogo from "./Gatsby_Logo.svg"
+import GithuLogo from "./GitHub_Logo.png"
 
 
 const IndexPage = ({
@@ -60,6 +62,7 @@ const IndexPage = ({
 
 							<p className="mt-0 mb-3 text-muted">Discover the many different ways to collect, analyze, and distribute data gathered from different sources. This is a one-stop shop to build and deploy your own project with easy to follow instructions.</p>
 
+							{/* Search bar with filter features */}
 							<Form className="d-flex mb-4">
 								<FormControl
 									size="lg"
@@ -74,6 +77,31 @@ const IndexPage = ({
 
 							<Alert variant="info" className="mb-4">{posts.length} results</Alert>
 
+							{/* // Logos for making this website. */}
+							<p className="text-center text-muted"> Made by David Jaimes and powered with <br/><br/>
+							<Figure>
+							<Figure.Image
+								width={150}
+								height={180}
+								alt="171x180"
+								src="https://www.gstatic.com/images/branding/lockups/svg/lockup_google_domains_867x140px_clr.svg"
+							/>
+							<Figure.Image
+								width={100}
+								height={180}
+								alt="171x180"
+								src={GatsbyLogo}
+							/>
+							<Figure.Image
+								width={75}
+								height={180}
+								alt="171x180"
+								src={GithuLogo}
+							/>
+							</Figure>
+							</p>
+
+							{/* Filtered posts */}
 							{posts.map(post => <PostLink key={post.node.id} post={post.node} />)}
 
 							<hr/>
