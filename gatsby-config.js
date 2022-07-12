@@ -50,7 +50,7 @@ module.exports = {
 	          options: {
         			maxWidth: 768,
         			showCaptions: false,
-        			markdownCaptions: true,
+        			markdownCaptions: false,
         			backgroundColor: 'transparent',
 	          },
 	        },

@@ -58,9 +58,14 @@ const IndexPage = ({
 					<Row className="mt-5 justify-content-center ml-0 mr-0">
 						<Col style={{maxWidth: "768px"}}>
 
-							<h1 className="mt-3">Hello there!</h1>
-
-							<p className="mt-0 mb-3 text-muted">Discover the many different ways to collect, analyze, and distribute data gathered from different sources. This is a one-stop shop to build and deploy your own project with easy to follow instructions.</p>
+							{/* // Logos for making this website. */}
+							<p className="mt-3 text-center text-muted">Website made by David Jaimes and powered with <br/><br/>
+								<Figure>
+									<Figure.Image width={150} height={180} alt="Google Domains Logo" src="https://www.gstatic.com/images/branding/lockups/svg/lockup_google_domains_867x140px_clr.svg"/>
+									<Figure.Image width={100} height={180} alt="171x180" src={GatsbyLogo}/>
+									<Figure.Image width={75} height={180} alt="171x180" src={GithuLogo}/>
+								</Figure>
+							</p>
 
 							{/* Search bar with filter features */}
 							<Form className="d-flex mb-4">
@@ -76,30 +81,6 @@ const IndexPage = ({
 							</Form>
 
 							<Alert variant="info" className="mb-4">{posts.length} results</Alert>
-
-							{/* // Logos for making this website. */}
-							<p className="text-center text-muted"> Made by David Jaimes and powered with <br/><br/>
-							<Figure>
-							<Figure.Image
-								width={150}
-								height={180}
-								alt="171x180"
-								src="https://www.gstatic.com/images/branding/lockups/svg/lockup_google_domains_867x140px_clr.svg"
-							/>
-							<Figure.Image
-								width={100}
-								height={180}
-								alt="171x180"
-								src={GatsbyLogo}
-							/>
-							<Figure.Image
-								width={75}
-								height={180}
-								alt="171x180"
-								src={GithuLogo}
-							/>
-							</Figure>
-							</p>
 
 							{/* Filtered posts */}
 							{posts.map(post => <PostLink key={post.node.id} post={post.node} />)}
